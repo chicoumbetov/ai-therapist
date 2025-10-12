@@ -49,7 +49,7 @@ export function ActivityLogger({
   const [name, setName] = useState("");
   const [duration, setDuration] = useState("");
   const [description, setDescription] = useState("");
-  const { user, isAuthenticated, loading } = useSession();
+  const { isAuthenticated, loading } = useSession();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
