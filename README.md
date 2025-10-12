@@ -1,5 +1,8 @@
 # AI-powered therapy conversations with emotional intelligence
 
+Full Stack AI Therapist Agent App using NextJS, NodeJs | MongoDB , ExpressJs , EchoAPI
+Google Gemini AI
+
 ## Key Features:
 Real-time crisis detection and stress signal monitoring
 Interactive therapeutic activities (breathing exercises, zen garden, forest walks)
