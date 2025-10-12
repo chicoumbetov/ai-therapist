@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Ripple } from "@/components/ui/ripple";
 import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
 import {
@@ -110,6 +111,7 @@ export default function Home() {
           <div className="absolute w-[400px] h-[400px] rounded-full bg-secondary/10 blur-3xl bottom-0 right-0 animate-pulse delay-700" />
           <div className="absolute inset-0 bg-background/80 backdrop-blur-3xl" />
         </div>
+        <Ripple className="opacity-60" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
