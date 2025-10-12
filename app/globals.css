@@ -54,26 +54,26 @@
 
 :root {
   /* Calming light theme colors */
-  --background: 180 20% 99%;
-  --foreground: 200 8% 24%;
+  --background: #f7faf9;
+  --foreground: #2e3537;
 
-  --card: 180 20% 99%;
-  --card-foreground: 200 8% 24%;
+  --card: #f7faf9;
+  --card-foreground: #2e3537;
 
-  --popover: 180 20% 99%;
-  --popover-foreground: 200 8% 24%;
+  --popover: #f7faf9;
+  --popover-foreground: #2e3537;
 
   /* Soft sage green as primary */
-  --primary: 150 30% 60%;
-  --primary-foreground: 150 40% 16%;
+  --primary: #9bc9b2;
+  --primary-foreground: #2a3d29;
 
   /* Gentle lavender as secondary */
-  --secondary: 250 20% 96%;
-  --secondary-foreground: 250 10% 30%;
+  --secondary: #f3f2fa;
+  --secondary-foreground: #726b8a;
 
   /* Muted tones */
-  --muted: 210 20% 96%;
-  --muted-foreground: 215 16% 45%;
+  --muted: #f3f2fa;
+  --muted-foreground: #6e7c8a;
 
   /* Soft accent */
   --accent: 180 25% 95%;

@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import {
   // Geist, Geist_Mono, 
@@ -38,12 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      className={`${inter.variable} font-sans antialiased`}>
-          <Providers>
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
+      >
+        <Providers>
           <Header />
           <main>{children}</main>
           <Footer />
+          <Toaster />
         </Providers>
       </body>
     </html>
