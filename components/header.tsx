@@ -2,6 +2,7 @@
 
 import { SignInButton } from "@/components/auth/sign-in-button";
 import { Button } from "@/components/ui/button";
+import { useSession } from "@/lib/contexts/session-context";
 import {
   AudioWaveform,
   LogOut,
@@ -14,8 +15,10 @@ import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Header() {
+  const { isAuthenticated, logout, user } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  console.log("Header: Auth state:", { isAuthenticated, user });
   const navItems = [
     { href: "/features", label: "Features" },
     { href: "/about", label: "About Aura" },
@@ -32,7 +35,7 @@ export function Header() {
           >
             <AudioWaveform className="h-7 w-7 text-primary animate-pulse-gentle" />
             <div className="flex flex-col">
-              <span className="font-semibold text-lg bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              <span className="font-semibold text-lg bg-gradient-to-r from-primary to-primary/80 bg-clip-text ">
                 Aura3.0
               </span>
               <span className="text-xs dark:text-muted-foreground">
@@ -58,6 +61,7 @@ export function Header() {
             <div className="flex items-center gap-3">
               <ThemeToggle />
 
+              {isAuthenticated ? (
                 <>
                   <Button
                     asChild
@@ -70,16 +74,16 @@ export function Header() {
                   </Button>
                   <Button
                     variant="outline"
-                    onClick={() => {}}
+                    onClick={logout}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <LogOut className="w-4 h-4 mr-2" />
                     Sign out
                   </Button>
                 </>
-              
+              ) : (
                 <SignInButton />
-              
+              )}
 
               <Button
                 variant="ghost"
@@ -111,11 +115,23 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-
+              {isAuthenticated && (
+                <Button
+                  asChild
+                  className="mt-2 mx-4 gap-2 bg-primary/90 hover:bg-primary"
+                >
+                  <Link href="/dashboard">
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Start Chat</span>
+                  </Link>
+                </Button>
+              )}
             </nav>
           </div>
         )}
       </header>
+
+      {/* <LoginModal /> */}
     </div>
   );
 }
