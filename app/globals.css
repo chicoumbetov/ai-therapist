@@ -76,52 +76,52 @@
   --muted-foreground: #6e7c8a;
 
   /* Soft accent */
-  --accent: 180 25% 95%;
-  --accent-foreground: 200 8% 24%;
+  --accent: hsl(180 25% 95%);
+  --accent-foreground: hsl(200 8% 24%);
 
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 20% 98%;
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(210 20% 98%);
 
-  --border: 200 10% 90%;
-  --input: 200 10% 90%;
-  --ring: 150 30% 60%;
+  --border: hsl(200 10% 90%);
+  --input: hsl(200 10% 90%);
+  --ring: hsl(150 30% 60%);
 
   --radius: 0.75rem;
 }
 
 .dark {
   /* Soothing dark theme colors */
-  --background: 200 50% 3%;
-  --foreground: 210 20% 98%;
+  --background: hsl(200 50% 3%);
+  --foreground: hsl(210 20% 98%);
 
-  --card: 200 50% 3%;
-  --card-foreground: 210 20% 98%;
+  --card: hsl(200 50% 3%);
+  --card-foreground: hsl(210 20% 98%);
 
-  --popover: 200 50% 3%;
-  --popover-foreground: 210 20% 98%;
+  --popover: hsl(200 50% 3%);
+  --popover-foreground: hsl(210 20% 98%);
 
   /* Soft sage in dark mode */
-  --primary: 150 30% 70%;
-  --primary-foreground: 150 40% 16%;
+  --primary: hsl(150 30% 70%);
+  --primary-foreground: hsl(150 40% 16%);
 
   /* Gentle purple in dark mode */
-  --secondary: 250 20% 20%;
-  --secondary-foreground: 210 20% 98%;
+  --secondary: hsl(250 20% 20%);
+  --secondary-foreground: hsl(210 20% 98%);
 
   /* Muted dark tones */
-  --muted: 200 50% 10%;
-  --muted-foreground: 210 20% 70%;
+  --muted: hsl(200 50% 10%);
+  --muted-foreground: hsl(210 20% 70%);
 
   /* Soft dark accent */
-  --accent: 200 50% 10%;
-  --accent-foreground: 210 20% 98%;
+  --accent: hsl(200 50% 10%);
+  --accent-foreground: hsl(210 20% 98%);
 
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 210 20% 98%;
+  --destructive: hsl(0 62% 30%);
+  --destructive-foreground: hsl(210 20% 98%);
 
-  --border: 200 50% 10%;
-  --input: 200 50% 10%;
-  --ring: 150 30% 70%;
+  --border: hsl(200 50% 10%);
+  --input: hsl(200 50% 10%);
+  --ring: hsl(150 30% 70%);
 }
 
 @layer base {
