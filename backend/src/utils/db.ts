@@ -4,7 +4,7 @@ import { logger } from "./logger";
 const MONGODB_URI =
   process.env.MONGODB_URI || // * REAL mongodb is hidden and imported in deployment server as env variable
   "mongodb+srv://blocklinklabs:rKjw3YwImNAzgMzU@cluster0.znbgmwt.mongodb.net/ai-therapy";
-  // open mongo db
+  // * open mongo db of youtuber
 
 export const connectDB = async () => {
   try {
