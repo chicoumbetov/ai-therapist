@@ -11,14 +11,11 @@ import { errorHandler } from "./middleware/errorHandler"
 
 import authRouter from "./modules/user/routes/auth"
 
-/*
-
-import chatRouter from "./routes/chat"
-import moodRouter from "./routes/mood"
-import activityRouter from "./routes/activity"
-*/
 import { inngest } from "./inngest/client"
 import { functions as inngestFunctions } from "./inngest/functions"
+import activityRouter from "./routes/activity"
+import chatRouter from "./routes/chat"
+import moodRouter from "./routes/mood"
 
 // Load environment variables
 dotenv.config()
@@ -38,7 +35,6 @@ app.use(
   "/api/inngest",
   serve({ client: inngest, functions: inngestFunctions })
 )
-
 // OnaF6EGHhgYY9OPv
 
 // Routes
@@ -47,13 +43,10 @@ app.get("/", (req, res) => { // health
 })
 
 app.use("/auth", authRouter)
-/*
-
 app.use("/chat", chatRouter)
 app.use("/api/mood", moodRouter)
 app.use("/api/activity", activityRouter)
 
-*/
 // Error handling middleware
 app.use(errorHandler)
 
